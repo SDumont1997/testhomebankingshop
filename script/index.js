@@ -13,7 +13,7 @@ const app = Vue.createApp({
     },
     methods: {
         sendPurchase(){
-            axios.post("http://localhost:8080/api/cards/purchase", {cardNumber: this.cardNumber, cvv: this.cvv, amount: this.amount, storeName: this.storeName, detail: this.detail})
+            axios.post("https://mindhub-brothers-bank.herokuapp.com/api/cards/purchase", {cardNumber: this.cardNumber, cvv: this.cvv, amount: this.amount, storeName: this.storeName, detail: this.detail})
             .then(response=> {
                 console.log("success")
             })
